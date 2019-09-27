@@ -70,7 +70,6 @@ let counting = (function () {
         };
 }());
 
-
 console.log(counting.value()); 
 counting.increment();
 counting.increment();
@@ -101,10 +100,10 @@ console.log('');
  */
 
 let myPrint = function(a, b, res) {
-    return 'a'+ '^' + 'b ' + '= ' + res;
+    return  a + '^' + b +'=' + res;
 };
 
- let myPow = function(a, b, callback) {
+let myPow = function(a, b, callback) {
     let pow = function(c, d) {
         if(d !== 1) {
             return c *= pow(c, d - 1);
@@ -113,15 +112,12 @@ let myPrint = function(a, b, res) {
     };
 
     return callback(a, b, pow(a, b));
-
- };
+};
 
 console.log(myPow(3, 4, myPrint)); 
 console.log(myPow(2, 3, myPrint)); 
 
 console.log('');
-
-
 
 /*
  * #4
@@ -133,7 +129,6 @@ console.log('');
  * car.name – бренд авто, строка
  * car.year – год выпуска, число
  * car.used – строка для описания состояния авто, допускаются значения 'used' и 'new'
- * 
  *
  * #5
  *
@@ -157,7 +152,7 @@ console.log('');
 let yearNow = new Date().getFullYear();
 
 function fullInfo() {
-    return this.name + ' ' + this.model + ', '+ this.engine + 'cc' + ', ' + this.year + ', ' + this.used;
+    return this.name + ' ' + this.model + ', '+ this.engine + 'cc' + ', ' + 'year ' + this.year + ', ' + this.used;
 }
 
 let car = {
@@ -195,7 +190,6 @@ let car2 = {
             this.year = yearNow;
         }
     }
-
 };
 
 let car3 = {
@@ -214,7 +208,6 @@ let car3 = {
             this.year = yearNow;
         }
     }
-
 };
 
 console.log(car.info());
@@ -231,12 +224,7 @@ car3.used = 'new';
 
 console.log(car3.info());
 
-
 console.log('');
-
-
-
-
 
 /*
  * #7
@@ -244,8 +232,6 @@ console.log('');
  * произвольный числовой массив и возвращает максимальное число из переданного ей массива.
  * В реализации функции должен быть применен метод Math.max() и apply().
  */
-
-
 
 let list = [12, 23, 100, 34, 56, 9, 233];
  let myMax = function(arr) {
@@ -263,9 +249,9 @@ console.log('');
  * Создайте функцию myMul(a, b), которая будет умножать числа а и b, возвращая результат.
  */
 
- let myMul = function(a, b) {
+let myMul = function(a, b) {
      return a * b;
- }
+}
 
  console.log(myMul(5, 7));
 
@@ -277,7 +263,7 @@ console.log('');
  * Функция возвращает результат вычисления.
  */
 
- let myDouble = myMul.bind(null, 2);
+let myDouble = myMul.bind(null, 2);
 
 console.log(myDouble(3)); 
 
@@ -306,7 +292,6 @@ console.log('');
  * В реализации разрешено использование set.
  * Любые условные операторы – запрещены и объекты.
  */
-
 
 let notUniqNums = [1, 1, 2, 3, 4, 5, 6, 7];
 
